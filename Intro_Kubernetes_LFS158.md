@@ -55,7 +55,7 @@ License in Apache Version 2.
 
 # Kubernetes Architecture: 
 
-![K8S Architecture](../K8S/K8S_Architecture.png)
+![K8S Architecture](https://github.com/kajuare/K8S/blob/master/K8S_Architecture.png)
 
 ## Components: 
 
@@ -127,9 +127,9 @@ Key points:
     Production: stage and production environments should replicate etcd in HA mode to protect the cluster’s configuration data.
     kubeadm default: provisions a stacked etcd, running on the same control plane node and sharing resources with the other components.
 ```
-![Stacked etcd Topology](../K8S/K8S_Stackedetcd_Topology.png) 
+![Stacked etcd Topology](https://github.com/kajuare/K8S/blob/master/K8S_Stackedetcd_Topology.png) 
 
-![External etcd Topology](../K8S/K8S_ETCD_EXTERN.png)
+![External etcd Topology](https://github.com/kajuare/K8S/blob/master/K8S_ETCD_EXTERN.png)
 
 ```text
     Summary: etcd supports HA in both stacked and external topologies. It uses the Raft consensus algorithm, so a group of nodes works as one and survives member failures. One node is the leader and the rest are followers. If the leader fails, the healthy followers elect a new one.
@@ -185,7 +185,7 @@ Key points:
     CRI (Container Runtime Interface): the plugin-based interface kubelet uses to talk to runtimes. It includes protocol buffers, a gRPC API, libraries, and extra specs and tools.
     CRI shim: the app that sits between kubelet and the runtime, making runtimes interchangeable.
 ```
-![Container Runtime INterface](../K8S/K8S_CRI.png)
+![Container Runtime INterface](https://github.com/kajuare/K8S/blob/master/K8S_CRI.png)
 
 **Note:**
 This diagram shows how the kubelet gets containers to run, step by step, from left to right.
